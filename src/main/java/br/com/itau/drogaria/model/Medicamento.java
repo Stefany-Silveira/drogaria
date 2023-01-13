@@ -1,19 +1,20 @@
 package br.com.itau.drogaria.model;
 
+import br.com.itau.drogaria.controller.request.MedicamentoRequest;
 import lombok.*;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.util.List;
 
 @Entity
+@Table(name = "Medicamento")
 @Getter
 @Setter
 @ToString
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Medicamento {
+public class Medicamento extends MedicamentoRequest {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,6 +22,6 @@ public class Medicamento {
     private String nome;
     private String fabricante;
     private int quantidade;
-    private BigDecimal preco;
+    private double preco;
 
 }

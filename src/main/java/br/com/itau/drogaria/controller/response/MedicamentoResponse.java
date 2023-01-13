@@ -13,5 +13,5 @@ public class MedicamentoResponse {
     private String nome;
     private String fabricante;
     private int quantidade;
-    private BigDecimal preco;
+    private double preco;
 }

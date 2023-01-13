@@ -13,7 +13,6 @@ public class MedicamentoAdapter {
                 .nome(medicamentoRequest.getNome())
                 .fabricante(medicamentoRequest.getFabricante())
                 .quantidade(medicamentoRequest.getQuantidade())
-                .preco(medicamentoRequest.getPreco())
                 .build();
     }
 
@@ -23,7 +22,6 @@ public class MedicamentoAdapter {
                 .nome(medicamento.getNome())
                 .fabricante(medicamento.getFabricante())
                 .quantidade(medicamento.getQuantidade())
-                .preco(medicamento.getPreco())
                 .build();
     }
 }

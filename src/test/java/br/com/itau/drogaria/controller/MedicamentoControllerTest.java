@@ -49,17 +49,6 @@ class MedicamentoControllerTest {
     }
 
     @Test
-    void findByTagSuccess() {
-        var tag = "web";
-        var response = medicamentoController.findByTag(tag);
-
-        BDDMockito.when(medicamentoServiceMock.findByTag(ArgumentMatchers.anyString())).thenReturn(List.of(MedicamentoResponse.builder().build()));
-
-        Assertions.assertThat(response).isNotNull();
-        Assertions.assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-    }
-
-    @Test
     void saveSuccess() {
         var toolRequest = new MedicamentoRequest();
         var response = medicamentoController.save(toolRequest);

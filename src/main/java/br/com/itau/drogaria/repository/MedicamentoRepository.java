@@ -10,6 +10,6 @@ public interface MedicamentoRepository extends JpaRepository<Medicamento, Long> 
 
     public List<Medicamento> findAllByNomeContainingIgnoreCase(String nome);
     public List<Medicamento> findByFabricanteEquals(String fabricante);
-    public List<Medicamento> findByPrecoLessThanOrderByPrecoDesc(BigDecimal preco);
+    public List<Medicamento> findByPrecoLessThanOrderByPrecoDesc(double preco);
 
 }

@@ -23,16 +23,10 @@ public class MedicamentoController {
         return ResponseEntity.ok(medicamentoService.listAll());
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<MedicamentoResponse> getById(@PathVariable Long id) {
-        return MedicamentoService.findById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
-    }
-
-    @GetMapping("/name/{name}")
-    public ResponseEntity<List<Medicamento>> buscarPorNome(@PathVariable String name){
-        return ResponseEntity.ok(medicamentoService.findAllByNomeContainingIgnoreCase(name));
+    @GetMapping(path="/{id}")
+        public ResponseEntity<Medicamento> findById(@PathVariable Long id){
+        Medicamento medicamento = medicamentoService.findById(id);
+        return ResponseEntity.ok().body(medicamento);
     }
 
     @PostMapping
@@ -40,14 +34,9 @@ public class MedicamentoController {
         return new ResponseEntity<>(medicamentoService.save(medicamentoRequest), HttpStatus.CREATED);
     }
 
-    @PutMapping
-    public ResponseEntity<Medicamento> alterarProduto(@Valid @RequestBody Medicamento medicamento) {
-        if(medicamentoService.existsById(medicamento.getId())) {
-            return categoriaRepository.findById(medicamento.getCategoria().getId())
-                    .map(resposta -> ResponseEntity.status(HttpStatus.OK).body(medicamentoService.save(medicamento)))
-                    .orElse(ResponseEntity.badRequest().build());
-        }
-        return ResponseEntity.notFound().build();
+    @PutMapping(path="/{id}")
+    public ResponseEntity<MedicamentoResponse> update(@Valid @RequestBody Medicamento medicamento) {
+        return ResponseEntity.status(HttpStatus.OK).body(medicamentoService.save(medicamento));
     }
 
     @DeleteMapping(path = "/{id}")
