@@ -22,6 +22,6 @@ public class Medicamento extends MedicamentoRequest {
     private String nome;
     private String fabricante;
     private int quantidade;
-    private double preco;
+    private BigDecimal preco;
 
 }

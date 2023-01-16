@@ -35,8 +35,8 @@ public class MedicamentoController {
     }
 
     @PutMapping(path="/{id}")
-    public ResponseEntity<MedicamentoResponse> update(@Valid @RequestBody Medicamento medicamento) {
-        return ResponseEntity.status(HttpStatus.OK).body(medicamentoService.save(medicamento));
+    public ResponseEntity<Medicamento> update(@RequestBody Medicamento medicamento) {
+        return ResponseEntity.status(HttpStatus.OK).body(medicamentoService.update(medicamento));
     }
 
     @DeleteMapping(path = "/{id}")
