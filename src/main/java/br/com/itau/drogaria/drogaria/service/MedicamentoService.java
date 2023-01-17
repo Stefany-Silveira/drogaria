@@ -1,10 +1,10 @@
-package br.com.itau.drogaria.service;
+package br.com.itau.drogaria.drogaria.service;
 
-import br.com.itau.drogaria.adapter.MedicamentoAdapter;
-import br.com.itau.drogaria.controller.request.MedicamentoRequest;
-import br.com.itau.drogaria.controller.response.MedicamentoResponse;
-import br.com.itau.drogaria.model.Medicamento;
-import br.com.itau.drogaria.repository.MedicamentoRepository;
+import br.com.itau.drogaria.drogaria.adapter.MedicamentoAdapter;
+import br.com.itau.drogaria.drogaria.controller.request.MedicamentoRequest;
+import br.com.itau.drogaria.drogaria.controller.response.MedicamentoResponse;
+import br.com.itau.drogaria.drogaria.repository.MedicamentoRepository;
+import br.com.itau.drogaria.drogaria.model.Medicamento;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

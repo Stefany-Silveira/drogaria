@@ -1,6 +1,6 @@
-package br.com.itau.drogaria.repository;
+package br.com.itau.drogaria.drogaria.repository;
 
-import br.com.itau.drogaria.model.Medicamento;
+import br.com.itau.drogaria.drogaria.model.Medicamento;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.math.BigDecimal;

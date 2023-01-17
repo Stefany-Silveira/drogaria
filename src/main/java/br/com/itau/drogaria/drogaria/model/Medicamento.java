@@ -1,6 +1,6 @@
-package br.com.itau.drogaria.model;
+package br.com.itau.drogaria.drogaria.model;
 
-import br.com.itau.drogaria.controller.request.MedicamentoRequest;
+import br.com.itau.drogaria.drogaria.controller.request.MedicamentoRequest;
 import lombok.*;
 
 import javax.persistence.*;

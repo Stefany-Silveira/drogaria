@@ -1,4 +1,4 @@
-package br.com.itau.drogaria;
+package br.com.itau.drogaria.drogaria;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
