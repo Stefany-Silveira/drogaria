@@ -1,6 +1,6 @@
-package br.com.itau.drogaria.drogaria.model;
+package br.com.drogaria.model;
 
-import br.com.itau.drogaria.drogaria.controller.request.MedicamentoRequest;
+import br.com.drogaria.controller.request.MedicamentoRequest;
 import lombok.*;
 
 import javax.persistence.*;
@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Medicamento extends MedicamentoRequest {
+public class Medicamento {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
