@@ -1,4 +1,4 @@
-package br.com.itau.drogaria.drogaria.config;
+package br.com.drogaria.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,7 +22,7 @@ public class SwaggerConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("br.com.itau.drogaria"))
+                .apis(RequestHandlerSelectors.basePackage("br.com.drogaria"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(metaInfo());
