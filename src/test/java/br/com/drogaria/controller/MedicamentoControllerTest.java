@@ -1,10 +1,9 @@
-package br.com.itau.drogaria.controller;
+package br.com.drogaria.controller;
 
-import br.com.itau.drogaria.drogaria.controller.request.MedicamentoRequest;
-import br.com.itau.drogaria.drogaria.controller.response.MedicamentoResponse;
-import br.com.itau.drogaria.drogaria.controller.MedicamentoController;
-import br.com.itau.drogaria.drogaria.model.Medicamento;
-import br.com.itau.drogaria.drogaria.service.MedicamentoService;
+import br.com.drogaria.controller.request.MedicamentoRequest;
+import br.com.drogaria.controller.response.MedicamentoResponse;
+import br.com.drogaria.controller.MedicamentoController;
+import br.com.drogaria.service.MedicamentoService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
