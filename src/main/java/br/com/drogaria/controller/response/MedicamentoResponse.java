@@ -1,4 +1,4 @@
-package br.com.itau.drogaria.drogaria.controller.response;
+package br.com.drogaria.controller.response;
 
 import lombok.Builder;
 import lombok.Data;
