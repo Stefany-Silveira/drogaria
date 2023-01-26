@@ -1,7 +1,7 @@
-package br.com.itau.drogaria.util;
+package br.com.drogaria.util;
 
-import br.com.itau.drogaria.drogaria.controller.response.MedicamentoResponse;
-import br.com.itau.drogaria.drogaria.model.Medicamento;
+import br.com.drogaria.controller.response.MedicamentoResponse;
+import br.com.drogaria.model.Medicamento;
 
 import java.math.BigDecimal;
 
