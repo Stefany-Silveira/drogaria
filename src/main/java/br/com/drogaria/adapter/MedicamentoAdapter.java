@@ -1,8 +1,8 @@
-package br.com.itau.drogaria.drogaria.adapter;
+package br.com.drogaria.adapter;
 
-import br.com.itau.drogaria.drogaria.controller.request.MedicamentoRequest;
-import br.com.itau.drogaria.drogaria.controller.response.MedicamentoResponse;
-import br.com.itau.drogaria.drogaria.model.Medicamento;
+import br.com.drogaria.controller.request.MedicamentoRequest;
+import br.com.drogaria.model.Medicamento;
+import br.com.drogaria.controller.response.MedicamentoResponse;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -17,7 +17,7 @@ public class MedicamentoAdapter {
                 .build();
     }
 
-    public MedicamentoResponse toMedicamentoResponse(Medicamento medicamento) {
+    public MedicamentoResponse tomedicamentoResponse(Medicamento medicamento) {
         return MedicamentoResponse.builder()
                 .id(medicamento.getId())
                 .nome(medicamento.getNome())
