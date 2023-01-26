@@ -1,10 +1,10 @@
-package br.com.itau.drogaria.drogaria.service;
+package br.com.drogaria.service;
 
-import br.com.itau.drogaria.drogaria.adapter.MedicamentoAdapter;
-import br.com.itau.drogaria.drogaria.controller.request.MedicamentoRequest;
-import br.com.itau.drogaria.drogaria.controller.response.MedicamentoResponse;
-import br.com.itau.drogaria.drogaria.repository.MedicamentoRepository;
-import br.com.itau.drogaria.drogaria.model.Medicamento;
+import br.com.drogaria.adapter.MedicamentoAdapter;
+import br.com.drogaria.controller.request.MedicamentoRequest;
+import br.com.drogaria.controller.response.MedicamentoResponse;
+import br.com.drogaria.model.Medicamento;
+import br.com.drogaria.repository.MedicamentoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +22,7 @@ public class MedicamentoService {
     public List<MedicamentoResponse> listAll() {
         return medicamentoRepository.findAll()
                 .stream()
-                .map(medicamentoAdapter::toMedicamentoResponse)
+                .map(medicamentoAdapter::tomedicamentoResponse)
                 .collect(Collectors.toList());
     }
 
@@ -31,13 +31,13 @@ public class MedicamentoService {
         return medicamento.get();
     }
 
-    public Medicamento update (Medicamento medicamento) {
+    public Medicamento update(Medicamento medicamento) {
         return medicamentoRepository.save(medicamento);
     }
 
     public MedicamentoResponse save(MedicamentoRequest medicamentoRequest) {
         var medicamento = medicamentoAdapter.toMedicamento(medicamentoRequest);
-        return medicamentoAdapter.toMedicamentoResponse(medicamentoRepository.save(medicamento));
+        return medicamentoAdapter.tomedicamentoResponse(medicamentoRepository.save(medicamento));
     }
 
     public void delete(Long id) {
